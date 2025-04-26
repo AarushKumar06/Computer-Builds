@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Guide</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Modern Green Tech Theme */
+        :root {
+            --primary: #27ae60;
+            --primary-light: #d3f9d8;
+            --primary-border: #a6e8b9;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #3498db;
+            --gray: #95a5a6;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #f5fdf7;
+            margin: 0;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background-color: var(--primary-light);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-border);
+            animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            animation: textFocusIn 0.8s both;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes textFocusIn {
+            0% {
+                filter: blur(4px);
+                opacity: 0;
+            }
+
+            100% {
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-top: 40px;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+            font-family: 'Montserrat', sans-serif;
+            animation: fadeInUp 0.5s both;
+            animation-delay: 0.4s;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-top: 30px;
+            font-family: 'Montserrat', sans-serif;
+            animation: fadeInUp 0.5s both;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        main {
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        pre {
+            font-family: 'Roboto Mono', monospace;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow-x: auto;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            opacity: 0;
+            animation: sectionAppear 0.6s forwards;
+            animation-delay: 0.6s;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        @keyframes sectionAppear {
+            to {
+                opacity: 1;
+            }
+        }
+
+        pre:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        b {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards;
+            animation-delay: 0.7s;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #f1f8fe;
+        }
+
+        .winner {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        footer {
+            background-color: var(--primary-light);
+            color: #666666;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.95rem;
+            border-top: 1px solid var(--primary-border);
+            margin-top: 40px;
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+            animation-delay: 1.2s;
+        }
+
+        .premium-image {
+            width: 100%;
+            max-width: 500px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 128, 0, 0.3);
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 20px auto;
+            opacity: 0;
+            animation: fadeInUp 0.6s forwards;
+            animation-delay: 0.8s;
+        }
+
+        .premium-image:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            pre {
+                padding: 15px;
+                font-size: 0.9rem;
+            }
+
+            th,
+            td {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+
+            .premium-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Know Your Components</h1>
+    </header>
+
+    <main>
+        <img src="images/pc.jpg" alt="Computer Components" class="premium-image">
+
+        <h2>Processors</h2>
+        <pre>
+<b>Cores -</b> One physical unit in the CPU that processes data. 
+More cores = can do more things at once
+
+<b>Threads -</b> A virtual part of a core.
+More threads = smoother multitasking
+
+Think of cores as workers and Threads are their extra arms.
+
+
+<b>Processor speed -</b> Measured in GHz
+Higher GHz = faster processing per core.
+Like how fast each worker (core) can think.</pre>
+
+        <h2>Graphic Processing Unit (GPU)</h2>
+        <pre>
+Special chip made for handling images, videos, animations and 3D stuff.
+
+<b>Why do you NEED a GPU?</b>
+Games, 3D rendering, video editing, AI stuff - all heavy visual work.
+CPU can't handle those fancy graphics alone.
+
+GPU = visual bodybuilder, CPU = brain 
+
+<b>Functions of GPU</b>
+- Renders images and frames
+- Accelerates video editing and animation
+- Enables higher resolutions (1080p, 1440, 4K) and high FPS (frames per second)</pre>
+
+        <h3>Types of GPU</h3>
+        <pre>
+<b>Integrated GPU:</b>
+Built into the CPU (basic graphics for movies, light games)
+
+<b>Dedicated/Discrete GPU:</b>
+Separate card with its own power and memory (for serious work/gaming)
+ex. RTX 4060, RX 7600</pre>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>RTX 4060</th>
+                    <th>RX 7600</th>
+                    <th>Which Wins?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Coding (VS Code, Android Studio, etc.)</td>
+                    <td>Smooth, but GPU isn't the bottleneck here anyway</td>
+                    <td>Smooth, same deal</td>
+                    <td class="winner">Tie (Depends on CPU + RAM)</td>
+                </tr>
+                <tr>
+                    <td>Multitasking (Multiple tabs, apps open)</td>
+                    <td>No problem. Good efficiency. Lower power = stays cooler</td>
+                    <td>Same — handles heavy multitasking well too</td>
+                    <td class="winner">Tie (CPU/RAM matter more)</td>
+                </tr>
+                <tr>
+                    <td>Streaming (OBS + Gaming Together)</td>
+                    <td>Better NVENC Encoder = Higher quality streams with less CPU load</td>
+                    <td>Streaming possible, but AMD encoder isn't as optimized for OBS</td>
+                    <td class="winner">RTX 4060 wins (By a good margin)</td>
+                </tr>
+                <tr>
+                    <td>Gaming (1080p/1440p)</td>
+                    <td>Good FPS + extra boost with DLSS 3</td>
+                    <td>Raw FPS is slightly better at traditional games (no DLSS)</td>
+                    <td class="winner">Depends: 4060 for modern games, 7600 for older ones</td>
+                </tr>
+                <tr>
+                    <td>Video Editing (Premiere Pro, DaVinci Resolve)</td>
+                    <td>Superior GPU acceleration (especially Adobe Premiere)</td>
+                    <td>Good but Nvidia cards are better supported in video apps</td>
+                    <td class="winner">RTX 4060 wins (Better for creators)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Storage</h2>
+        <pre>
+<b>Types of storage:</b>
+1. HDD - Slow, old-school. Mechanical
+2. SATA SSD - Much Faster, no moving parts
+3. NVMe SSD - Blazing fast, connects directly via PCIe</pre>
+
+        <h2>PCIe</h2>
+        <pre>
+Slot interface on the motherboard where you plug in graphic cards, SSDs, WiFi cards, etc.
+x16 = for GPUs, x4/x1 = for SSDs or add-ons 
+
+Like plugging organs into the motherboard's body</pre>
+    </main>
+
+    <footer>
+        A site by Aarush Kumar ✨
+    </footer>
+</body>
+
+</html>

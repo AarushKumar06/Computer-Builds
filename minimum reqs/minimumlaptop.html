@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimum Reqs for Laptop</title>
+
+    <style>
+        /* Add this in a <style> tag inside your <head> or link it as a separate CSS file */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    animation: fadeInBody 0.8s ease-in-out;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 20px 0;
+    text-align: center;
+    animation: slideInTop 0.6s ease-out;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0 10%;
+    animation: fadeInLine 1s ease;
+}
+
+main {
+    padding: 20px 10%;
+    animation: fadeInUp 1s ease;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    animation: listFadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+li:hover {
+    background-color: #eef2ff;
+    border-left: 4px solid #6c63ff;
+    padding-left: 16px;
+    cursor: default;
+}
+
+/* Animations */
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInTop {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInLine {
+    from { width: 0%; opacity: 0; }
+    to { width: 80%; opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes listFadeIn {
+    to { opacity: 1; }
+}
+
+/* Stagger list items */
+li:nth-child(1) { animation-delay: 0.2s; }
+li:nth-child(2) { animation-delay: 0.4s; }
+li:nth-child(3) { animation-delay: 0.6s; }
+li:nth-child(4) { animation-delay: 0.8s; }
+li:nth-child(5) { animation-delay: 1s; }
+li:nth-child(6) { animation-delay: 1.2s; }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Minimum Requirements for Laptop</h1>
+    </header>
+    <hr>
+
+    <main>
+        <ul>
+            <li>Processor - Intel i5 12450HX or similar. AMD ryzen 5 7235HS, AMD ryzen 7 7435HS or similar</li>
+            <li>Graphic Card - RTX 4060 6gb ram OR RTX 4050 6gb Preferably but RTX 3050 works fine too </li>
+            <li>RAM - 16gb DDR5</li>
+            <li>Storage - must've two nvme slots, 1tb</li>
+            <li>TDP - atleast 75W (worst case scenario then aboev 60W) </li>
+            <li>Display - 144HZ with great colours, for ex. display of Lenovo LOQ </li>
+        </ul>
+</body>
+
+</html>

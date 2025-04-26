@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMD Builds</title>
+    <style>
+        /* Global Reset and Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fff0f0, #fff8f8);
+            color: #3d1f1f;
+            padding: 2rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #660000;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #cc0000;
+            text-shadow: 1px 1px 2px rgba(100, 0, 0, 0.1);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-top: 0.5rem;
+            color: #993333;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #f3a3a3;
+            margin: 1rem auto 1.5rem;
+            width: 60%;
+            animation: growWidth 0.6s ease-in-out;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(200, 0, 0, 0.15);
+            animation: fadeIn 1s ease-in-out 0.5s backwards;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #f4dada;
+            transition: background 0.3s ease;
+        }
+
+        th {
+            background: #ffcccc;
+            font-weight: 600;
+            color: #660000;
+        }
+
+        tr:hover td {
+            background: #ffe6e6;
+        }
+
+        td {
+            color: #3d1f1f;
+        }
+
+        tr:last-child td {
+            font-weight: bold;
+            color: #b30000;
+            background: #fff0f0;
+            border-bottom: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes growWidth {
+            from { width: 0; }
+            to { width: 60%; }
+        }
+
+        /* Responsive Touch */
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th {
+                background: #f4b4b4;
+            }
+
+            tr {
+                margin-bottom: 1rem;
+                box-shadow: 0 4px 10px rgba(200, 0, 0, 0.1);
+            }
+
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                font-weight: bold;
+                color: #660000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AMD Builds</h1>
+        <hr>
+        <h2>AMD CPUs offer more cores and threads at a lower price</h2>
+    </header>
+
+    <main>
+        <table>
+            <tr>
+                <th>Components</th>
+                <th>Build #1</th>
+                <th>Build #2</th>
+                <th>Build #3</th>
+            </tr>
+            
+            <tr>
+                <th><strong>Processors</strong></th>
+                <td>Ryzen 5 5600X (6C/12T) (combo)</td>
+                <td>Ryzen 5 5600X (6C/12T) (combo)</td>
+                <td>Ryzen 7 7600 (6C/12T)</td>
+            </tr>
+
+            <tr>
+                <th><strong>GPU</strong></th>
+                <td>AsRock Radeon RX 7600 8gb</td>
+                <td>GIGABYTE GeForce RTX 4060 8gb</td>
+                <td>GIGABYTE GeForce RTX 4060 8gb</td>
+            </tr>
+
+            <tr>
+                <th><strong>Motherboard</strong></th>
+                <td>B550M Pro-VDH WiFi D4 (combo) (with type-c)</td>
+                <td>B550M Pro-VDH WiFi D4 (combo) (with type-c)</td>
+                <td>B550M Pro-VDH WiFi D4 (with type-c)</td>
+            </tr>
+
+            <tr>
+                <th><strong>Ram</strong></th>
+                <td>2x8gb 3200MHz TeamGroup T-Force Delta (White)</td>
+                <td>2x8gb 3200MHz TeamGroup T-Force Delta (White)</td>
+                <td>2x8gb 3200MHz TeamGroup T-Force Delta (White)</td>
+            </tr>
+
+            <tr>
+                <th><strong>Storage</strong></th>
+                <td>Western Digital 1TB Blue SN5000 Nvme SSD</td>
+                <td>Western Digital 1TB Blue SN5000 Nvme SSD</td>
+                <td>Western Digital 1TB Blue SN5000 Nvme SSD</td>
+            </tr>
+            
+            <tr>
+                <th><strong>PSU</strong></th>
+                <td colspan="3">Antec CSK550 550W 80+ Bronze</td>
+            </tr>
+
+            <tr>
+                <th><strong>Prices</strong></th>
+                <th>60,773</th>
+                <th>65,873</th>
+                <th>67,104</th>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intel Builds</title>
+</head>
+
+<body>
+    <header>
+        <h1>Intel Builds</h1>
+        <hr>
+        <h2>Intel CPUs have higher clock speeds and single-core performance</h2>
+
+        <style>
+            
+    /* Global Reset and Base */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #e6f0ff, #f7fbff);
+        color: #1f2d3d;
+        padding: 2rem;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #003366;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #0055aa;
+        text-shadow: 1px 1px 2px rgba(0, 0, 50, 0.1);
+        animation: slideDown 0.8s ease-out;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-top: 0.5rem;
+        color: #336699;
+        animation: slideUp 0.8s ease-out;
+    }
+
+    hr {
+        border: none;
+        border-top: 2px solid #a3c4f3;
+        margin: 1rem auto 1.5rem;
+        width: 60%;
+        animation: growWidth 0.6s ease-in-out;
+    }
+
+    /* Table Styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 85, 170, 0.15);
+        animation: fadeIn 1s ease-in-out 0.5s backwards;
+    }
+
+    th, td {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #dbe9f4;
+        transition: background 0.3s ease;
+    }
+
+    th {
+        background: #cce0ff;
+        font-weight: 600;
+        color: #003366;
+    }
+
+    tr:hover td {
+        background: #e6f2ff;
+    }
+
+    td {
+        color: #1a2c47;
+    }
+
+    tr:last-child td {
+        font-weight: bold;
+        color: #00509e;
+        background: #e0f0ff;
+        border-bottom: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes growWidth {
+        from { width: 0; }
+        to { width: 60%; }
+    }
+
+    /* Responsive Touch */
+    @media (max-width: 768px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+
+        th {
+            background: #bbd4f0;
+        }
+
+        tr {
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 85, 170, 0.1);
+        }
+
+        td {
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+        }
+
+        td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #003366;
+        }
+    }
+</style>
+
+        </style>
+    </header>
+
+    <main>
+        <table>
+            <tr>
+                <th>Components</th>
+                <th>Build #1</th>
+                <th>Build #2</th>
+                <th>Build #3</th>
+               
+            </tr>
+
+            <tr>
+                <th><strong>Processors</strong></th>
+                <td>Intel i5 12400F (6C/12T)</td>
+                <td>Intel i5 12400F (6C/12T)</td>
+                <td>Intel i5 13400F (10C/16T)</td>
+           
+            </tr>
+
+            <tr>
+                <th><strong>GPU</strong></th>
+                <td>Asrock Radeon RX 7600 8gb (White) </td>
+                <td>Asrock Radeon RX 7600 8gb (White) </td>
+                <td>GIGABYTE GeForce RTX 4060 8gb</td>
+            
+            </tr>
+
+            <tr>
+                <th><strong>Motherboard</strong></th>
+                <td>MSI B760M Bomber WiFi (DDR4)</td>
+                <td>MSI B760M Bomber WiFi (DDR5) </td>
+                <td>MSI B760M Bomber WiFi (DDR5) </td>
+           
+            </tr>
+
+            <tr>
+                <th><strong>Ram</strong></th>
+                <td>2x8gb 3200MHz TeamGroup T-Force Delta (White)</td>
+                <td>1x16gb 6000MHz TeamGroup T-Force Delta (White)</td>
+                <td>1x16gb 6000MHz TeamGroup T-Force Delta (White)</td>
+         
+            </tr>
+
+            <tr>
+                <th><strong>Storage</strong></th>
+                <td>Western Digital 1TB Blue SN5000 Nvme SSD</td>
+                <td>Western Digital 1TB Blue SN5000 Nvme SSD</td>
+                <td>Western Digital 1TB Blue SN5000 Nvme SSD</td>
+          
+            </tr>
+
+            <tr>
+                <th><strong>PSU</strong></th>
+                <td colspan="4">Antec CSK550 550W 80 plus bronze</td>
+            </tr>
+
+            <tr>
+                <th><strong>Prices (GST incl.)</strong></th>
+                <th>57,781</th>
+                <th>61,308</th>
+                <th>69,958
+               
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>
